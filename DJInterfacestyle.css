@@ -1,0 +1,198 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #666666
+  }
+  
+  /* current dj text placed from the JSON */
+  #currentDJ {
+    font-size: 30px;
+  }
+  
+  #header {
+    display: grid;
+    grid-template-columns: 10vw 1fr;
+    grid-template-rows: 10vh;
+    padding: 10px 30px;
+  }
+  
+  #logo {
+    height: 90%;
+  }
+  
+  #playing {
+    text-align: right;
+    align-self: flex-end;
+    padding: 10px;
+  }
+  
+  .top {
+    display: inline;
+    padding: 5px;
+    font-size: 30px;
+  }
+  
+  #topContainer {
+    display: block;
+    width: 100%;
+    padding: 20px 0px;
+    margin: 10px auto;
+    text-align: center;
+    background-image: linear-gradient(rgb(242, 90, 34), rgb(255, 223, 29));
+    color: #2078cb;
+    text-align: center;
+  }
+  
+  #border {
+    border: 5px solid transparent;
+    border-image: linear-gradient(to bottom, rgb(255, 223, 29), rgb(242, 90, 34));
+    border-image-slice: 1;
+    width: 55%;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  #menu {
+    width: 80%;
+    margin: auto;
+  }
+  
+  #submit {
+    display: block;
+    text-align: center;
+    width: 100px;
+    margin: 30px auto;
+    background-color: #2078cb;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+  }
+  
+  #snackbar {
+    visibility: hidden;
+    min-width: 300px;
+    margin-left: -150px;
+    background-color: #2078cb;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  #failbar {
+    visibility: hidden;
+    min-width: 300px;
+    margin-left: -150px;
+    background-color: #cb2020;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+  }
+  
+  #failbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  .reminderSection {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-auto-rows: auto;
+    width: 100%;
+    margin: auto;
+    overflow-wrap: break-word;
+  }
+  
+  .reminderSection div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 0px;
+    border-bottom: 2px solid #2078cb;
+    /*border: 2px solid rgb(242, 90, 34);
+    border-radius: 10px;*/
+    margin: 5px;
+    /*background-color: rgb(226, 226, 226);*/
+    background-color: rgb(226, 226, 226);
+    color: black;
+  }
+  
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2078cb;
+    padding: 10px 0px;
+    margin: 5px;
+    text-align: center;
+  }
+  
+  .reminder, .subtext {
+    padding: 0px 5px;
+    margin: 0px;
+  }
+  
+  .reminder {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .subtext {
+    font-size: 16px;
+  }
+  
+  a.reminder{
+    color: #2078cb;
+    text-decoration: none;
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .reminderSection {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: auto auto auto;
+      width: 100%;
+    }
+  
+    #border {
+      width: 70%;
+    }
+  }
+  

@@ -1,17 +1,5 @@
 var refreshMins = 5;
-var msPerMin = 1000*60;
-
-console.log(DJShows[1].get(ShowName));
-
-function getDJ() {
-    var now = new Date();
-    for (i = 0; i < DJShows.length; ++i) {
-        startSplit = DJShows[i].Start.split(":")
-        endSplit = DJShows[i].End.split(":")
-
-    }
-
-}
+var msPerMin = 1000 * 60;
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function () {
