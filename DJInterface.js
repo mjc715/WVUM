@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 
     console.log("ready")
@@ -5,7 +6,7 @@ $(document).ready(function(){
   
   //showing current DJ
   
-    $.getJSON("https://us-central1-wvum-d6fb8.cloudfunctions.net/getDJ", function(result){
+    $.getJSON("currentDJs.js", function(result){
       $("#currentDJ").html(result.currentDJ);
     });
     
@@ -26,10 +27,10 @@ $(document).ready(function(){
       else {
         obj.currentDJ = select.selected();
   
-        $.post("https://us-central1-wvum-d6fb8.cloudfunctions.net/setDJ", obj)
+        $.post("currentDJS.js", obj)
           .done(function(msg){
             console.log(msg);
-            $.getJSON("https://us-central1-wvum-d6fb8.cloudfunctions.net/getDJ", function(result){
+            $.getJSON("currentDJs.js", function(result){
             $("#currentDJ").html(result.currentDJ)
           })
           .fail(function(){
@@ -53,4 +54,16 @@ $(document).ready(function(){
     
   
   });
+
+// document.addEventListener('load', () => {
+//     const params = (new URL(document.location)).searchParams;
+//     const djName = params.get('submit');
+//     document.getElementById('currentDJ').innerHTML = djName;
+//     window.setInterval(function () {
+//         const params = (new URL("https://www.wvum.org/djs")).searchParams;
+//         const djName = params.get('submit');
+//         document.getElementById('demo').innerHTML = djName;
+//     }, refreshMins * msPerMin);
+    
+//   });
   

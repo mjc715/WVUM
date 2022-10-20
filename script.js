@@ -5,7 +5,7 @@ $(document).ready(function(){
   
   //showing current DJ
   
-    $.getJSON("https://us-central1-wvum-d6fb8.cloudfunctions.net/getDJ", function(result){
+    $.getJSON("currentDJs.js", function(result){
       $("#currentDJ").html(result.currentDJ);
     });
     

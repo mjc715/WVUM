@@ -22,6 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
   callApi();
 });
 
+// document.addEventListener('load', () => {
+//     const params = (new URL("https://www.wvum.org/djs")).searchParams;
+//     const djName = params.get('submit');
+//     document.getElementById('demo').innerHTML = djName;
+//     window.setInterval(function () {
+//         const params = (new URL("https://www.wvum.org/djs")).searchParams;
+//         const djName = params.get('submit');
+//         document.getElementById('demo').innerHTML = djName;
+//     }, refreshMins * msPerMin);
+    
+//   });
+
 
 
 
